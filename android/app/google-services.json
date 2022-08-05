@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "885554585377",
+    "firebase_url": "https://olci-dart-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "olci-dart",
+    "storage_bucket": "olci-dart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885554585377:android:a6ce29c9a09b45afcca860",
+        "android_client_info": {
+          "package_name": "com.example.learningdart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885554585377-49ev98quqb2lmn0c60dnvuvjihjtc74a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP6AGZgMq-QM7oug4p6b9tvyGwjKIufgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885554585377-49ev98quqb2lmn0c60dnvuvjihjtc74a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
