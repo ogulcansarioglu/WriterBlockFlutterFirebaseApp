@@ -19,7 +19,8 @@ void main() {
       routes: {
         loginRoute: (context) => const LoginView(),
         registerRoute: (context) => const RegisterView(),
-        notesRoute: (context) => const NotesView()
+        notesRoute: (context) => const NotesView(),
+        verifyEmailRoute: (context) => const VerifyEmailView()
       }));
 }
 
@@ -36,7 +37,6 @@ class HomePage extends StatelessWidget {
         switch (snapshot.connectionState) {
           case ConnectionState.done:
             final user = FirebaseAuth.instance.currentUser;
-            return const NotesView();
             if (user != null) {
               if (user.emailVerified) {
                 return const NotesView();
@@ -76,22 +76,19 @@ class NotesView extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Main UI'),
         actions: [
-          PopupMenuButton<MenuAction>(
-            onSelected: (value) async {
-              switch (value) {
-              
-                case MenuAction.logout:
-                  final shouldLogout = await showLogOutDialog(context);
-                  if (shouldLogout) {
-                    await FirebaseAuth.instance.signOut();
-                    Navigator.of(context).pushNamedAndRemoveUntil(loginRoute, 
+          PopupMenuButton<MenuAction>(onSelected: (value) async {
+            switch (value) {
+              case MenuAction.logout:
+                final shouldLogout = await showLogOutDialog(context);
+                if (shouldLogout) {
+                  await FirebaseAuth.instance.signOut();
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                    loginRoute,
                     (_) => false,
-                    );
-
-                  }
-                  break;
-              }
-    
+                  );
+                }
+                break;
+            }
           }, itemBuilder: (context) {
             return const [
               const PopupMenuItem<MenuAction>(
@@ -113,13 +110,17 @@ Future<bool> showLogOutDialog(BuildContext context) {
           title: const Text('Sign Out'),
           content: const Text('Are you sure you want to sign out?'),
           actions: [
-            TextButton(onPressed: () {
-              Navigator.of(context).pop(false);
-            }, child: const Text('Cancel')),
-            TextButton(onPressed: () {
-              Navigator.of(context).pop(true);
-            }, child: const Text('Logout')),
+            TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop(false);
+                },
+                child: const Text('Cancel')),
+            TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop(true);
+                },
+                child: const Text('Logout')),
           ],
         );
-      }).then((value) =>  value ?? false);
+      }).then((value) => value ?? false);
 }
