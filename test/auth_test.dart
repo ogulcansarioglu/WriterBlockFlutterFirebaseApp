@@ -1,10 +1,8 @@
-import 'dart:ui';
 
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/rendering.dart';
 import 'package:learningdart/services/auth/auth_exceptions.dart';
 import 'package:learningdart/services/auth/auth_provider.dart';
 import 'package:learningdart/services/auth/auth_user.dart';
+import 'package:learningdart/services/auth/crud/notes_service.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -117,7 +115,7 @@ class MockAuthProvider implements AuthProvider {
     if (!isInitialized) throw NotInitiliazedException();
     if(email == 'foo@bar.com') throw UserNotFoundAuthException();
     if(password == "foobar") throw WrongPasswordAuthException();
-    const user = AuthUser(isEmailVerified: false);
+    var user = AuthUser(email: email, isEmailVerified: false);
     _user = user;
     return Future.value(user);
   }
@@ -127,7 +125,7 @@ class MockAuthProvider implements AuthProvider {
     if (!isInitialized) throw NotInitiliazedException();
     final user = _user;
     if (user == null) throw UserNotFoundAuthException();
-    const newUser = AuthUser(isEmailVerified: true);
+    var newUser = AuthUser(isEmailVerified: true, email: user.email);
     _user = newUser;
   }
 }

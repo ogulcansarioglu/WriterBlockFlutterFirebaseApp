@@ -108,8 +108,8 @@ class FirebaseAuthProvider implements AuthProvider {
       throw UserNotLoggedInException();
     }
 
-    // TODO: implement sendEmailVerification
-    throw UnimplementedError();
+    
+    
   }
   
   @override
