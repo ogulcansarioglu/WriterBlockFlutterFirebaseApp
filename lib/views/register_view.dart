@@ -6,7 +6,9 @@ import 'dart:developer' as devtools show log;
 import 'package:learningdart/constants/routes.dart';
 import 'package:learningdart/services/auth/auth_exceptions.dart';
 import 'package:learningdart/services/auth/auth_service.dart';
-import 'package:learningdart/utility/show_error_dialog.dart';
+
+import '../utility/dialogs/error_dialog.dart';
+
 
 class RegisterView extends StatefulWidget {
   const RegisterView({Key? key}) : super(key: key);
