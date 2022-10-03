@@ -4,22 +4,22 @@ This app allows writers to write and store their notes, and then, share them on 
 
 ## Milestones
 
-1 - Basic UI, Done
-2 - Firebase Initilazation, done
-3 - Login with Firebase, done
-4 - Custom Auth System that allows Firebase, Google Cloud etc, done
-5 - Notes writing, storing and deleting functionalities, done
-6 - Local Database, done
-6 - Notes Sharing Fundementals, done
-7 - Full Firebase Imigration, done
-8 - Ready, as an note keeping app, to be shared on Google and Apple Store, done
+- Basic UI, done
+- Firebase Initilazation, done
+- Login with Firebase, done
+- Local Database with SQLlite, done
+- Custom Auth System that allows Firebase, Google Cloud etc, done
+- Notes writing, storing and deleting functionalities, done
+- Notes Sharing Fundementals, done
+- Full Firebase Imigration, done
+- Ready, as an note keeping app, to be shared on Google and Apple Store, done
 
 ##Next Steps
 
-8 - Creating the feed where users can modify and read shared notes
-9 - Scores and Gamification based on Contributions and ReadCounts
-10 - User Testing
-11 - Sharing on Google Store and Apple Store 
+- Creating the feed where users can modify and read shared notes
+- Scores and Gamification based on Contributions and ReadCounts
+- User Testing
+- Sharing on Google Store and Apple Store 
 
 Login Screen: 
 
@@ -30,3 +30,6 @@ Notes Screen with Deletion and Update:
 ![Notes UI](https://user-images.githubusercontent.com/93154247/193502437-7c345454-731f-41fa-9d0d-a6ed7c7589d2.PNG)
 
 
+Sharing:
+
+![SharingFunction](https://user-images.githubusercontent.com/93154247/193502571-ee2cf552-6753-45f0-9df8-52c181dd9877.PNG)
