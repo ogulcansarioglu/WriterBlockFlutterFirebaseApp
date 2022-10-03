@@ -37,7 +37,7 @@ Sharing:
 
 Firebase Integration Code Snippet:
 
-'''
+```dart
 class FirebaseCloudStorage {
   final notes = FirebaseFirestore.instance.collection('notes');
 
@@ -96,5 +96,6 @@ class FirebaseCloudStorage {
 
   factory FirebaseCloudStorage() => _shared;
 }
+```
 
-'''
+
