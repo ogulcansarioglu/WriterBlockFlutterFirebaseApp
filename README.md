@@ -21,17 +21,56 @@ This app allows writers to write and store their notes, and then, share them on 
 - User Testing
 - Sharing on Google Store and Apple Store 
 
-Login Screen: 
+##Login Screen: 
 
 ![loginscreen](https://user-images.githubusercontent.com/93154247/193502352-0566515c-fa65-4464-b022-3ab2c59608d5.PNG)
 
 
-Notes Screen with Deletion and Update:
+##Notes Screen with Deletion and Update:
 
 ![Notes UI](https://user-images.githubusercontent.com/93154247/193502437-7c345454-731f-41fa-9d0d-a6ed7c7589d2.PNG)
+```dart
+ @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+        padding: const EdgeInsets.all(8.0),
+        itemExtent: 106.0,
+        itemCount: notes.length,
+        itemBuilder: (context, index) {
+          final note = notes.elementAt(index);
+          return Material(
+              type: MaterialType.transparency,
+              child: Container(
+                decoration: const BoxDecoration(
+                    color: Colors.white, shape: BoxShape.rectangle),
+                child: ListTile(
+                  onTap: () {
+                    onTap(note);
+                  },
+                  hoverColor: Colors.blueAccent,
+                  title: Text(
+                    note.text,
+                    maxLines: 1,
+                    softWrap: true,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  trailing: IconButton(
+                      onPressed: () async {
+                        final shouldDelete = await showDeleteDialog(context);
+                        if (shouldDelete) {
+                          onDeleteNote(note);
+                        }
+                      },
+                      icon: const Icon(Icons.delete)),
+                ),
+              ));
+        });
+  }
+}
+```
 
 
-Sharing:
+##Sharing:
 
 ![SharingFunction](https://user-images.githubusercontent.com/93154247/193502571-ee2cf552-6753-45f0-9df8-52c181dd9877.PNG)
 
