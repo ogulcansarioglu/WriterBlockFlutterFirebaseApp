@@ -25,5 +25,8 @@ Login Screen:
 
 ![loginscreen](https://user-images.githubusercontent.com/93154247/193502352-0566515c-fa65-4464-b022-3ab2c59608d5.PNG)
 
+Notes Screen with Deletion and Update:
+
+![Notes UI](https://user-images.githubusercontent.com/93154247/193502437-7c345454-731f-41fa-9d0d-a6ed7c7589d2.PNG)
 
 
