@@ -1,6 +1,8 @@
 # WriterBlock - A New, Innovative Notes App, Proof of Concept
 
-This app allows writers to write and store their notes, and then, share them on "Git" like system where everybody can contribute to and the writers gets to decide as an "admin" which changes to keep.
+This app allows writers to write and store their notes, and then, share them on "Git" like system where everybody can contribute to and the writers gets to decide as an "admin" which changes to keep. 
+
+This app is developed for both IOS&Android with Flutter & Dart and Firebase. 
 
 ## Milestones
 
